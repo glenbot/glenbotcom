@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1><span class="statement">import</span> glenbot</h1>
+    <p id="sub-title" class="comment"># {{ APP_TAGLINE }}</p>
+    <div id="columns">
+        <div id="left-column">
+            <section>
+                <h2>&gt;&gt;&gt; <span class="statement">print</span>(glenbot.gravatar)</h2>
+                <p><img src="http://www.gravatar.com/avatar/b25705b93d86c91f45186a9811b9772d.png" /></p>
+            </section>
+            <section>
+                <h2>&gt;&gt;&gt; <span class="statement">print</span>(glenbot.social)</h2>
+                <pre class="output">
+<span class="bold">{</span>
+    "<span class="string-key">twitter</span>": "<a class="string" href="https://twitter.com/glenbot">https://twitter.com/glenbot</a>",
+    "<span class="string-key">github</span>": "<a class="string" href="https://github.com/glenbot">https://github.com/glenbot</a>",
+    "<span class="string-key">codrspace</span>": "<a class="string" href="http://codrspace.com/glenbot">http://codrspace.com/glenbot</a>",
+    "<span class="string-key">gittip</span>": "<a class="string" href="https://gittip.com/glenbot">https://gittip.com/glenbot</a>"
+<span class="bold">}</span>
+                </pre>
+            </section>
+        </div>
+        <div id="right-column">
+            <section>
+                <h2>&gt;&gt;&gt; <span class="statement">print</span>(glenbot.blog_posts)</h2>
+                <pre class="output">
+<span class="bold">[</span>
+{%- for post in posts.objects %}
+    "<a class="string" href="{{ post.url }}">{{ post.title }}</a>",
+{%- endfor %}
+<span class="bold">]</span>
+                </pre>
+            </section>
+            <section>
+                <h2>&gt;&gt;&gt; <span class="statement">print</span>(glenbot.opensource)</h2>
+                <pre class="output">
+<span class="bold">{</span>
+    "<span class="string-key">codrspace</span>": "<a class="string" href="http://codrspace.com">http://codrspace.com</a>",
+    "<span class="string-key">python-aggcat</span>": "<a class="string" href="https://github.com/glenbot/python-aggcat">https://github.com/glenbot/python-aggcat</a>",
+    "<span class="string-key">campbx</span>": "<a class="string" href="https://github.com/glenbot/campbx">https://github.com/glenbot/campbx</a>",
+    "<span class="string-key">hacker_monthly</span>": "<a class="string" href="https://github.com/glenbot/hacker_monthly">https://github.com/glenbot/hacker_monthly</a>",
+    "<span class="string-key">django-redirect</span>": "<a class="string" href="https://github.com/glenbot/django-redirect">https://github.com/glenbot/django-redirect</a>",
+    "<span class="string-key">chef-tarsnap</span>": "<a class="string" href="https://github.com/glenbot/chef-tarsnap">https://github.com/glenbot/chef-tarsnap</a>",
+    "<span class="string-key">chef-uwsgi</span>": "<a class="string" href="https://github.com/glenbot/chef-uwsgi">https://github.com/glenbot/chef-uwsgi</a>",
+<span class="bold">}</span>
+                </pre>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+</html>

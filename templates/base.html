@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ APP_NAME }} - {{ APP_TAGLINE }}</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- Google Fonts embed code -->
+    <script type="text/javascript">
+        (function() {
+            var link_element = document.createElement("link"),
+                s = document.getElementsByTagName("script")[0];
+            if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+                link_element.href = "http:";
+            }
+            link_element.href += "//fonts.googleapis.com/css?family=Inconsolata:400,700";
+            link_element.rel = "stylesheet";
+            link_element.type = "text/css";
+            s.parentNode.insertBefore(link_element, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+{% block bottom_scripts %}{% endblock %}
+</html>

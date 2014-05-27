@@ -1,0 +1,64 @@
+body {
+    font-family: "Inconsolata";
+    font-style: normal;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1000px;
+    margin-top: 50px
+}
+
+#sub-title {
+    font-size: 20px;
+}
+
+#columns {
+    float: left;
+    width: 100%;
+}
+
+#left-column {
+    float: left;
+    width: 50%;
+}
+
+#right-column {
+    float: left;
+    width: 50%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    margin: 8px 0 8px 0;
+}
+
+.statement {
+    color: purple;
+}
+
+.comment {
+    color: #777;
+}
+
+.string {
+    color: green;
+    text-decoration: none;
+}
+
+.string-key {
+    color: red;
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+section {
+    margin: 15px 0 0 0;
+    width: 100%;
+}
