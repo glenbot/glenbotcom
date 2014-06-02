@@ -51,14 +51,11 @@ def index():
     # get or set posts from cach
     posts = cache.get('posts')
     if posts is None:
-        print 'here'
         posts = get_posts()
         cache.set('posts', posts, timeout=86400)
 
     # update the context
     ctx['posts'] = posts
-
-    print dir(posts)
 
     return render_template('index.html', **ctx)
 
